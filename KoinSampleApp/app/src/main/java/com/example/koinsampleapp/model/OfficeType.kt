@@ -1,4 +1,8 @@
 package com.example.koinsampleapp.model
 
-class OfficeType {
-}
+import androidx.room.PrimaryKey
+
+data class OfficeType(
+    @PrimaryKey val id: Int,
+    val name: String
+)

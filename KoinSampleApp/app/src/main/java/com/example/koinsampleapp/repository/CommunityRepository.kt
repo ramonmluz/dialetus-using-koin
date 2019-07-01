@@ -1,4 +1,4 @@
-package com.example.koinsampleapp.repository.room
+package com.example.koinsampleapp.repository
 
-class CommunityRepository {
+class   CommunityRepository {
 }
