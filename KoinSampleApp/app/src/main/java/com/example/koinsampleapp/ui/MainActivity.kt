@@ -1,22 +1,20 @@
 package com.example.koinsampleapp.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import br.com.tw.shufflesongsapp.adapter.RegionsRecyclerViewAdapter
 import com.example.koinsampleapp.R
-import com.example.koinsampleapp.viewmodel.DialectViewModel
+import com.example.koinsampleapp.viewmodel.RegionViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel: DialectViewModel by viewModel()
+    private val viewModel: RegionViewModel by viewModel()
 
     lateinit var linearLayoutManager: LinearLayoutManager
 

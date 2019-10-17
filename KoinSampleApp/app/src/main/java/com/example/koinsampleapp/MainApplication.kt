@@ -12,7 +12,12 @@ class MainApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@MainApplication)
-            modules(AppModule.DialectModule)
+            modules(
+                AppModule.apiModule,
+                AppModule.repositoryModule,
+                AppModule.regionModule,
+                AppModule.dialectModule
+            )
         }
     }
 }

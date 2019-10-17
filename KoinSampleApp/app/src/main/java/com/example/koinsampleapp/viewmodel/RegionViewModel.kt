@@ -4,21 +4,21 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.koinsampleapp.model.Dialect
+import com.example.koinsampleapp.model.Region
 import com.example.koinsampleapp.repository.DialectRepository
 import kotlinx.coroutines.launch
 
-class DialectViewModel(private val dialectRepository: DialectRepository) : ViewModel() {
+class RegionViewModel(private val dialectRepository: DialectRepository) : ViewModel() {
 
-    private val dialects = MutableLiveData<List<Dialect>>()
+    private val regions = MutableLiveData<List<Region>>()
 
-    fun getDialects(): LiveData<List<Dialect>> = dialects
+    fun getRegions(): LiveData<List<Region>> = regions
 
-    fun loadDialects(region: String) {
+    fun loadRegions() {
         viewModelScope.launch {
             try {
 
-                dialects.value = dialectRepository.loadDialect(region)
+                regions.value = dialectRepository.loadRegions()
 
             } catch (e: Exception) {
                 e.localizedMessage

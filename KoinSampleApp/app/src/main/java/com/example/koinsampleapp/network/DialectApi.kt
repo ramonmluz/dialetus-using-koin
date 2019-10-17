@@ -1,5 +1,7 @@
 package com.example.koinsampleapp.viewmodel
+
 import DialectApiDef
+import com.example.koinsampleapp.model.Dialect
 import com.example.koinsampleapp.model.Region
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -30,5 +32,9 @@ class DialectApi {
 
     suspend fun loadRegions(): List<Region> {
         return service.loadRegions()
+    }
+
+    suspend fun loadDialects(region: String): List<Dialect> {
+        return service.loadDialects(region)
     }
 }
